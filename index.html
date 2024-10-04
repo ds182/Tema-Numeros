@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números en Inglés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro */
+            color: white; /* Texto en blanco para resaltar */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            background-image: url('https://i.ibb.co/WWZfW4D/CLASE-MUESTRA-5.png'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            padding: 50px;
+            border-radius: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        h2 {
+            color: #f0f0f0; /* Color de subtítulos */
+        }
+        .menu {
+            background-color: #444;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu ul li {
+            margin: 0;
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            color: #ff6347;
+        }
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 16px;
+        }
+        ul {
+            font-size: 16px;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Números en Inglés</h1>
+
+<div class="menu">
+    <ul>
+        <li><a href="#numbers">Números</a></li>
+        <li><a href="#practice">Práctica</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <section id="numbers">
+        <h2>Los Números en Inglés</h2>
+        <p>Aprender los números en inglés es una de las primeras cosas que aprendemos cuando empezamos a estudiar este idioma. Aquí tienes los números del 1 al 20 para que los practiques:</p>
+        <ul>
+            <li><strong>One</strong> - 1</li>
+            <li><strong>Two</strong> - 2</li>
+            <li><strong>Three</strong> - 3</li>
+            <li><strong>Four</strong> - 4</li>
+            <li><strong>Five</strong> - 5</li>
+            <li><strong>Six</strong> - 6</li>
+            <li><strong>Seven</strong> - 7</li>
+            <li><strong>Eight</strong> - 8</li>
+            <li><strong>Nine</strong> - 9</li>
+            <li><strong>Ten</strong> - 10</li>
+            <li><strong>Eleven</strong> - 11</li>
+            <li><strong>Twelve</strong> - 12</li>
+            <li><strong>Thirteen</strong> - 13</li>
+            <li><strong>Fourteen</strong> - 14</li>
+            <li><strong>Fifteen</strong> - 15</li>
+            <li><strong>Sixteen</strong> - 16</li>
+            <li><strong>Seventeen</strong> - 17</li>
+            <li><strong>Eighteen</strong> - 18</li>
+            <li><strong>Nineteen</strong> - 19</li>
+            <li><strong>Twenty</strong> - 20</li>
+        </ul>
+    </section>
+
+    <section id="practice">
+        <h2>Practicando con los Números</h2>
+        <p>Una vez que ya sabes contar hasta el 20, ¡puedes seguir practicando hasta números más altos! Aquí tienes algunos tips para aprender los números más grandes:</p>
+        <ul>
+            <li>Para los números del 21 al 29, se usa <strong>twenty</strong> seguido del número correspondiente (por ejemplo: 21 es "twenty-one").</li>
+            <li>Los números de 30, 40, 50, etc., tienen sus propias palabras (por ejemplo: 30 es "thirty", 40 es "forty").</li>
+        </ul>
+    </section>
+
+    <div class="video-container">
+        <h2>Video Explicativo</h2>
+        <iframe src="https://www.youtube.com/embed/c_wLmFpXF7k" allowfullscreen></iframe>
+    </div>
+</div>
+
+<button id="scrollToTopBtn">Volver al Inicio</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        var menuLinks = document.querySelectorAll('.menu li a');
+        menuLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
